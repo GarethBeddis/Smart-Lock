@@ -1,17 +1,9 @@
 {
 	"interactionModel": {
 		"languageModel": {
-			"invocationName": "my test app",
+			"invocationName": "smart lock",
 			"types": [],
 			"intents": [
-				{
-					"name": "HelloWorldIntent",
-					"samples": [
-						"hello",
-						"say hello",
-						"say hello world"
-					]
-				},
 				{
 					"name": "MyNameIsIntent",
 					"samples": [

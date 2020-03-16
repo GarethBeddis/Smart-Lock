@@ -26,7 +26,7 @@ app.use(
 
 app.setHandler({
     LAUNCH() {
-        this.$speech.addText(`Welcome to your smart lock. Would you like ot lock your door? Check the statu sof your door? Or unlock your door?`)
+        this.$speech.addText(`Welcome to your smart lock. Would you like to lock your door? Check the status sof your door? Or unlock your door?`)
         this.$reprompt.addText(`Do you want to get the status of your door lock, lock the door, or unlock the door?`)
         this.ask(this.$speech, this.$reprompt);
     },
