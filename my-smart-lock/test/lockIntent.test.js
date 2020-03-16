@@ -13,7 +13,7 @@ for (const p of [new Alexa(), new GoogleAssistant()]) {
             const lockRequest = await testSuite.requestBuilder.intent('LockIntent', {lockStatus: 'lock'});
             const responseLockRequest = await conversation.send(lockRequest);
             expect(
-                responseLaunchRequest.isAsk(expectedLockPrompt)
+                responseLockRequest.isAsk(expectedLockPrompt)
             ).toBe(true);
 
         });
