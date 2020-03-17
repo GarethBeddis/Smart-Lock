@@ -2,20 +2,54 @@
 	"invocation": "smart lock",
 	"intents": [
 		{
-			"name": "MyNameIsIntent",
+			"name": "LockIntent",
 			"phrases": [
-				"{name}",
-				"my name is {name}",
-				"i am {name}",
-				"you can call me {name}"
+				"{lockStatus}",
+				"make the door {lockStatus}",
+				"please {lockStatus} the door",
+				"{lockStatus} the door",
+				"{lockStatus} my door"
 			],
 			"inputs": [
 				{
-					"name": "name",
-					"type": {
-						"alexa": "AMAZON.US_FIRST_NAME",
-						"dialogflow": "@sys.given-name"
-					}
+					"name": "lockStatus",
+					"type": "lockStatusType"
+				}
+			]
+		}
+	],
+	"inputTypes": [
+		{
+			"name": "lockStatusType",
+			"values": [
+				{
+					"value": "lock",
+					"synonyms": [
+						"secure",
+						"lock it",
+						"encrypt",
+						"locked",
+						"locking",
+						"safe",
+						"close",
+						"hide",
+						"close lock",
+						"prevent opening"
+					]
+				},
+				{
+					"value": "unlock",
+					"synonyms": [
+						"unlock it",
+						"unsecure",
+						"decrypt",
+						"unlocked",
+						"unlocking",
+						"unsafe",
+						"open",
+						"open lock",
+						"allow opening"
+					]
 				}
 			]
 		}
